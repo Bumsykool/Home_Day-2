@@ -4,14 +4,27 @@ module.exports = {
 
 		var min= myarray[0];
 		var max= myarray[0];
+		var result =[];
 		for (var i = [0]; i < myarray.length; i++) {
-			if(max < myarray[1] && min > myarray[1]){
-				max = myarray[1];
-				min = myarray[1];
-			}
-			return [min,max]
-		}
+			if(max < myarray[i]){
+				max = myarray[i];
+			} 
 
+			else if (min > myarray[i]){
+				
+				min = myarray[i];
+			}
+			
+		}
+			if (min === max){
+				result.push(min);
+			}
+			else {
+				result.push(min);
+				result.push(max);
+			}
+
+			return result;
 
 	}
 
